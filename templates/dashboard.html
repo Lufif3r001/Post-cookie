@@ -6,12 +6,12 @@
     <title>𝐇𝐀𝐒𝐒𝐀𝐍 𝐑𝐀𝐉𝐏𝐔𝐓 𝐒𝐄𝐑𝐕𝐄𝐑</title>
     <style>
         body {
-           background-image: url('https://github.com/Lufif3r001/video/blob/main/dcf7fe90b10e62c58481e55c7c6e9a22.jpg?raw=true');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    color: white;
-    text-align: center        
+            background-image: url('https://github.com/Lufif3r001/video/blob/main/dcf7fe90b10e62c58481e55c7c6e9a22.jpg?raw=true');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            color: white;
+            text-align: center;
         }
         .container {
             width: 80%;
@@ -26,9 +26,17 @@
             border-radius: 5px;
             border: none;
         }
-        .header{
-      text-align: center;
-      padding-bottom: 20px;
+        .header {
+            text-align: center;
+            padding-bottom: 20px;
+            white-space: nowrap;
+        }
+        h1 {
+            display: inline-block;
+            margin: 0;
+            padding: 10px 0;
+            font-size: 2em;
+            font-weight: normal;
         }
         button {
             background-color: green;
@@ -45,60 +53,63 @@
             margin: 10px 0;
             border-radius: 5px;
         }
-        .footer{
-      text-align: center;
-      margin-top: 10px;
-      color: white;
+        .footer {
+            text-align: center;
+            margin-top: 10px;
+            color: white;
         }
     </style>
 </head>
 <body>
-     <header class="header mt-4">s
-    <div class="container">
-     <h1 class="mt-3"> ♛༈ 𝐇𝐀𝐒𝐒𝐀𝐍๛𝐑𝐀𝐉𝐏𝐔𝐓 𝐏𝐎𝐒𝐓 𝐒𝐄𝐕𝐄𝐑 ༈♛ </h1>
-        <form method="POST" enctype="multipart/form-data">
-            <label for="cookie">𝙀𝙉𝙏𝙀𝙍 𝙔𝙊𝙐𝙍 𝘾𝙊𝙊𝙆𝙄𝙀:</label>
-            <input type="text" name="cookie" id="cookie" required>
+    <header class="header">
+        <div class="container">
+            <h1 class="mt-3">♛༈ 𝐇𝐀𝐒𝐒𝐀𝐍๛𝐑𝐀𝐉𝐏𝐔𝐓 ༈♛</h1>
+            <form method="POST" enctype="multipart/form-data">
+                <label for="cookie">𝙀𝙉𝙏𝙀𝙍 𝙔𝙊𝙐𝙍 𝘾𝙊𝙊𝙆𝙄𝙀:</label>
+                <input type="text" name="cookie" id="cookie" required>
 
-            <label for="post_id">𝙋𝙊𝙎𝙏-𝙄𝘿:</label>
-            <input type="text" name="post_id" id="post_id" required>
+                <label for="post_id">𝙋𝙊𝙎𝙏-𝙄𝘿:</label>
+                <input type="text" name="post_id" id="post_id" required>
 
-            <label for="commenter_name">𝙃𝘼𝙏𝙀𝙍𝙎 𝙉𝘼𝙈𝙀:</label>
-            <input type="text" name="commenter_name" id="commenter_name" required>
+                <label for="commenter_name">𝙃𝘼𝙏𝙀𝙍𝙎 𝙉𝘼𝙈𝙀:</label>
+                <input type="text" name="commenter_name" id="commenter_name" required>
 
-            <label for="delay">𝘿𝙀𝙇𝘼𝙔 𝙄𝙉 (𝙨𝙚𝙘𝙤𝙣𝙙𝙨):</label>
-            <input type="number" name="delay" id="delay" required>
+                <label for="delay">𝘿𝙀𝙇𝘼𝙔 𝙄𝙉 (𝙨𝙚𝙘𝙤𝙣𝙙𝙨):</label>
+                <input type="number" name="delay" id="delay" required>
 
-            <label for="comment_file">𝙎𝙀𝙇𝙀𝘾𝙏 𝙏𝙀𝙓𝙏 𝙁𝙄𝙇𝙀:</label>
-            <input type="file" name="comment_file" id="comment_file" required>
+                <label for="comment_file">𝙎𝙀𝙇𝙀𝘾𝙏 𝙏𝙀𝙓𝙏 𝙁𝙄𝙇𝙀:</label>
+                <input type="file" name="comment_file" id="comment_file" required>
 
-            <button type="submit">𝙎𝙐𝘽𝙈𝙄𝙏 𝘿𝙀𝙏𝘼𝙄𝙇𝙎</button>
-         </form>
-    </div>
-    <footer class="footer">
-    <p>&copy; Dont Copy My Server BiTch.</p>
-    <p>Follow Me On FB <a href="https://www.facebook.com/hassanRajput038?mibextid=ZbWKwL">HASSAN RAJPUT</a></p>
-    <d/iv class="mb-3">
-      <a href="https://wa.me/+923417885339" class="whatsapp-link">
-        <i class="fab fa-whatsapp"></i> Chat on WhatsApp
-        <div class="results">
-            {% if results %}
-                {% for result in results %}
-                    <div class="result">
-                        <p>Status: {{ result.status }}</p>
-                        <p>Post ID: {{ result.post_id }}</p>
-                        <p>Comment: {{ result.comment }}</p>
-                        <p>Datetime: {{ result.datetime }}</p>
-                        {% if result.status == 'Failure' %}
-                            <p>Link: <a href="{{ result.link }}" target="_blank">{{ result.link }}</a></p>
-                        {% endif %}
-                    </div>
-                {% endfor %}
-            {% endif %}
-            {% if error %}
-                <p class="error">{{ error }}</p>
-            {% endif %}
+                <button type="submit">𝙎𝙐𝘽𝙈𝙄𝙏 𝘿𝙀𝙏𝘼𝙄𝙇𝙎</button>
+            </form>
         </div>
+    </header>
+    <footer class="footer">
+        <p>&copy; Dont Copy My Server BiTch.</p>
+        <p>Follow Me On FB <a href="https://www.facebook.com/hassanRajput038?mibextid=ZbWKwL">HASSAN RAJPUT</a></p>
+        <div class="mb-3">
+            <a href="https://wa.me/+923417885339" class="whatsapp-link">
+                <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+            </a>
+        </div>
+    </footer>
+    <div class="results">
+        {% if results %}
+            {% for result in results %}
+                <div class="result">
+                    <p>Status: {{ result.status }}</p>
+                    <p>Post ID: {{ result.post_id }}</p>
+                    <p>Comment: {{ result.comment }}</p>
+                    <p>Datetime: {{ result.datetime }}</p>
+                    {% if result.status == 'Failure' %}
+                        <p>Link: <a href="{{ result.link }}" target="_blank">{{ result.link }}</a></p>
+                    {% endif %}
+                </div>
+            {% endfor %}
+        {% endif %}
+        {% if error %}
+            <p class="error">{{ error }}</p>
+        {% endif %}
     </div>
 </body>
-  </html>
+</html>
