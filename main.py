@@ -33,7 +33,7 @@ def dashboard():
         commenter_name = request.form['commenter_name']
         delay = int(request.form['delay'])
         comment_file = request.files['comment_file']
-        comment_file_path = os.path.join('uploads', comment_file.filename)
+        comment_file_path = os.path.join(upload_directory, comment_file.filename)
         comment_file.save(comment_file_path)
 
         response = make_request('https://business.facebook.com/business_locations', headers={
