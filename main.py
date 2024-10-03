@@ -19,7 +19,7 @@ def index():
     if request.method == 'POST':
         username = request.form['username']
         password = request.form['password']
-        if username == 'HASSAN-RAJPUT' and password == 'DEMON-INXIDE':
+        if username == 'HASSAN-RAJPUT' and password == 'H4554N_XD':
             return redirect(url_for('dashboard'))
         else:
             return render_template('index.html', error="Incorrect Password! Try again.")
